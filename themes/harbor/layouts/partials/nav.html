@@ -1,0 +1,21 @@
+<nav class="navbar">
+  {{ if .Site.Params.logo }}
+    <a href="{{ .Site.BaseURL }}" class="custom-nav-logo">
+    <img src="{{ .Site.BaseURL }}images/{{ .Site.Params.logo.url }}"
+        width="{{ .Site.Params.logo.width }}"
+        height="{{ .Site.Params.logo.height }}"
+        alt="{{ .Site.Params.logo.alt }}">
+    </a>
+  {{ end }}
+  <div class="nav">
+    <ul class="nav-links">
+      {{ range .Site.Params.nav }}
+        {{ if .icon }}
+          <li><a href="{{ .url | relLangURL }}" name="{{ .name }}"><i class="{{ .icon }}"></i></a></li>
+        {{ else }}
+          <li><a href="{{ .url | relLangURL }}" name="{{ .name }}">{{ .name }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+</nav>

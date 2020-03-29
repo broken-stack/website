@@ -1,0 +1,9 @@
+.custom-nav-logo {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.nav {
+    text-align: center !important;
+}

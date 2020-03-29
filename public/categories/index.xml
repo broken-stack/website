@@ -1,0 +1,23 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Categories on Broken Stack</title>
+		<link>https://broken-stack.github.io/categories/</link>
+		<description>Recent content in Categories on Broken Stack</description>
+		<generator>Hugo -- gohugo.io</generator>
+		
+  		<language>en</language>
+		
+		<managingEditor>Page(/categories) (icodecasually)</managingEditor>
+    	
+		<atom:link href="https://broken-stack.github.io/categories/" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Heap Spray</title>
+			<link>https://broken-stack.github.io/post/heapspray/</link>
+			<pubDate>Sat, 28 Mar 2020 11:47:38 -0700</pubDate>
+			<guid>https://broken-stack.github.io/post/heapspray/</guid>
+			<description>Heap Spray using Buffer Overflow I&amp;rsquo;m new to programming in C and programming exploits. This is a documentation of my code, the assumptions I&amp;rsquo;m making along the way, and the way I tackled problems I came across. You should read this as though you&amp;rsquo;re listening to a friend talking over a cup of coffee. I don&amp;rsquo;t want people thinking I&amp;rsquo;m an expert on these things, but I do think my experiences might be valuable for others.</description>
+		</item>
+      	
+	</channel>
+</rss>

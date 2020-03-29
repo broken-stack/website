@@ -1,0 +1,35 @@
+<script>
+  var toggle = document.getElementById("light-mode-toggle");
+
+  var darkTheme = document.getElementById("dark-mode-theme");
+  var darkThemeSys = document.getElementById("dark-mode");
+
+  // the default theme is dark
+  var savedTheme = localStorage.getItem("light-mode-storage") || "dark";
+  if (matchMedia('(prefers-color-scheme: dark)').matches) {
+    savedTheme = "dark"
+  }
+  setTheme(savedTheme);
+
+  toggle.addEventListener("click", () => {
+    if (toggle.className === "fas fa-moon") {
+        setTheme("dark");
+    } else if (toggle.className === "fas fa-sun") {
+        setTheme("light");
+    }
+  });
+
+  function setTheme(mode) {
+    localStorage.setItem("light-mode-storage", mode);
+
+    if (mode === "dark") {
+        darkTheme.disabled = false;
+        darkThemeSys.disabled = false;
+        toggle.className = "fas fa-sun";
+    } else if (mode === "light") {
+        darkTheme.disabled = true;
+        darkThemeSys.disabled = true;
+        toggle.className = "fas fa-moon";
+    }
+  }
+</script>

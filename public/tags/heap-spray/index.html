@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<title>heap spray</title>
+
+
+  
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" href="https://broken-stack.github.ioindex.xml" title="Site Title">
+
+<link id="dark-mode" rel="stylesheet" href="https://broken-stack.github.iocss/dark-sys.css" />
+<link id="dark-mode-theme" rel="stylesheet" href="https://broken-stack.github.iocss/dark.css" />
+<link rel="stylesheet" href="https://broken-stack.github.iofontawesome/css/all.css" />
+<link rel="stylesheet" href="/css/custom.css" />
+<script src="https://broken-stack.github.iojs/bundle.js"></script>
+<meta name="generator" content="Hugo 0.68.3" />
+  </head>
+  <body>
+    
+  
+
+
+
+
+  <header>
+    <nav class="navbar">
+  
+    <a href="https://broken-stack.github.io" class="custom-nav-logo">
+    <img src="https://broken-stack.github.ioimages//misadventures.png"
+        width=""
+        height="175"
+        alt="Logo">
+    </a>
+  
+  <div class="nav">
+    <ul class="nav-links">
+      
+        
+          <li><a href="/about/" name="About"><i class="fas fa-user fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="/tags" name="Tags"><i class="fas fa-tag fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="/categories" name="Category"><i class="fas fa-folder-open fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="/search" name="Search"><i class="fas fa-search fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="/archives" name="Archives"><i class="fas fa-archive fa-lg"></i></a></li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+    <div class="intro-header">
+      <div class="container">
+        <div class="tags-heading">
+          
+            
+          
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+    <div class="posts-list">
+      
+        
+      
+
+      
+        <article class="post-preview">
+  <a href="https://broken-stack.github.io/post/heapspray/">
+      <h2 class="post-title">Heap Spray</h2>
+  </a>
+  <div class="post-entry">
+    
+      <p>Heap Spray using Buffer Overflow I&rsquo;m new to programming in C and programming exploits. This is a documentation of my code, the assumptions I&rsquo;m making along the way, and the way I tackled problems I came across. You should read this as though you&rsquo;re listening to a friend talking over a cup of coffee. I don&rsquo;t want people thinking I&rsquo;m an expert on these things, but I do think my experiences might be valuable for others.</p>
+        <a href="https://broken-stack.github.io/post/heapspray/" class="post-read-more">Read More</a>
+    
+  </div>
+
+  <div class="postmeta">
+    <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>&nbsp;Mar 28, 2020
+  
+</span>
+
+  </div>
+</article>
+
+      
+      </div>
+    
+</div>
+
+    <footer>
+  <div class="container">
+    <p class="credits copyright">
+      <a href="https://broken-stack.github.ioabout">icodecasually</a>
+      &nbsp;&copy;
+      2020
+
+      
+        &nbsp;/&nbsp;
+        <a href="https://broken-stack.github.io">Broken Stack</a>
+      
+
+      &nbsp;&ndash;&nbsp;
+      <i class="fas fa-sun" id="light-mode-toggle"></i>
+
+      <p class="credits theme-by">
+        Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;Theme <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
+      </p>
+    </p>
+  </div>
+</footer>
+
+    <script>
+  var toggle = document.getElementById("light-mode-toggle");
+
+  var darkTheme = document.getElementById("dark-mode-theme");
+  var darkThemeSys = document.getElementById("dark-mode");
+
+  
+  var savedTheme = localStorage.getItem("light-mode-storage") || "dark";
+  if (matchMedia('(prefers-color-scheme: dark)').matches) {
+    savedTheme = "dark"
+  }
+  setTheme(savedTheme);
+
+  toggle.addEventListener("click", () => {
+    if (toggle.className === "fas fa-moon") {
+        setTheme("dark");
+    } else if (toggle.className === "fas fa-sun") {
+        setTheme("light");
+    }
+  });
+
+  function setTheme(mode) {
+    localStorage.setItem("light-mode-storage", mode);
+
+    if (mode === "dark") {
+        darkTheme.disabled = false;
+        darkThemeSys.disabled = false;
+        toggle.className = "fas fa-sun";
+    } else if (mode === "light") {
+        darkTheme.disabled = true;
+        darkThemeSys.disabled = true;
+        toggle.className = "fas fa-moon";
+    }
+  }
+</script>
+
+  </body>
+</html>
